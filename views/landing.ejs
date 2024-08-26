@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./partials/head.ejs") %>
+</head>
+<body>
+    <main>
+        <div>
+          <a href="/user/signup"><button>Signup</button></a>
+          <a href="/user/login"><button>Login</button></a>
+        </div>
+      </main>
+      <% for (fruit of allFruits) { %>
+        <article>
+          
+                <h2>
+                    <%= fruit.name %> - <%= fruit.readyToEat ? "Ripe" : "Not Ripe" %>
+                </h2>
+           
+        </article>
+        <% } %>
+</body>
+</html>
